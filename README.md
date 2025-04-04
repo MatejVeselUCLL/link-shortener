@@ -42,3 +42,22 @@ Privacy information can be found at https://privacy.microsoft.com/en-us/
 
 Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
 or trademarks, whether by implication, estoppel or otherwise.
+
+## Notes
+ - Start Docker.
+ - Command palette: Dev Containers: Reopen in dev container.
+ - (npm create vite@latest PizzaClient --template react; cd PizzaClient)
+ - npm install
+ - npm run dev
+ - npx json-server --watch db.json --port 5100
+ - dotnet ef database update
+ - (dotnet tool install -g dotnet-ef)
+ - dotnet run
+ - dotnet ef migrations add yourMigrationName
+ - dotnet ef database update
+
+## Starting the application
+ - Start docker.
+ - Command palette: Dev Containers: Reopen in dev container.
+ - `dotnet run` in folder `PizzaStore`.
+ - `npm run dev` in folder `PizzaClient-WithComponents-And-Fetch-WithStyle`.

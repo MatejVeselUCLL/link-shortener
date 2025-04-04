@@ -10,8 +10,8 @@ namespace PizzaStore.Migrations
         {
             migrationBuilder.InsertData(
                 table: "Pizzas",
-                columns: new[] { "Id", "Description", "Name" },
-                values: new object[] { 1, "Pepperoni Pizza", "Pepperoni" });
+                columns: new[] { "Id", "Description", "Name" , "AccessedTimes", "CreatedOn"},
+                values: new object[] { 1, "Pepperoni Pizza", "Pepperoni", 0, DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt")});
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

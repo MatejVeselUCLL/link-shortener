@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import PizzaList from './PizzaList';
 
-const term = "Pizza";
-const API_URL = '/pizzas';
+const term = "URL Shortener";
+const API_URL = '/links';
 const headers = {
   'Content-Type': 'application/json',
 };
@@ -19,16 +19,21 @@ function Pizza() {
   }, []);
 
   const handleCreate = (item) => {
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    // var dateTime = date+' '+time;
 
     console.log(`add item: ${JSON.stringify(item)}`)
 
     fetch(API_URL, {
       method: 'POST',
       headers,
-      body: JSON.stringify({name: item.name, description: item.description}),
+      // body: JSON.stringify({name: item.name, createdOn: currentDate.getTime().toString()}),
+      body: JSON.stringify({name: item.name, createdOn: date+' '+time}),
     })
       .then(response => response.json())
-      .then(returnedItem => setData([...data, returnedItem]))
+      .then(returnedItem => setData([returnedItem, ...data]))
       .catch(error => setError(error));
   };
 

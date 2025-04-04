@@ -11,6 +11,6 @@ public class PizzaDb : DbContext
     protected override void OnModelCreating (ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Pizza>().HasData(
-            new Pizza { Id = 1, Name = "Pepperoni", Description = "Classic Pepperoni Pizza"});
+            new Pizza { Id = 1, Name = "Pepperoni", Description = "Classic Pepperoni Pizza", AccessedTimes = 0 });
     }
 }
