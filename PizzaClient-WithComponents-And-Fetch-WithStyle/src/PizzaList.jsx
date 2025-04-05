@@ -63,7 +63,7 @@ function PizzaList({ name, data, onCreate, onUpdate, onDelete, error }) {
     <Box className="Box" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h2>{name}</h2>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 8, width: '1000px'}}>
-        <TextField style={{ width: "100%" }} label="Name" name="name" value={formData.name} onChange={handleFormChange} />
+        <TextField style={{ width: "100%" }} label="Link" name="name" value={formData.name} onChange={handleFormChange} />
         {/* <TextField style={{ width: "100%" }} label="Date" name="date" value={formData.name} onChange={handleFormChange} /> */}
         {/* <TextField label="Description" name="description" value={formData.description} onChange={handleFormChange} /> */}
         <Button sx={{ mr: 1 }} variant="contained" type="submit">{editingId === null ? 'Create' : 'Update'}</Button>
